@@ -25,8 +25,8 @@ public class Funcionario {
 		this.matricula = cargo;
 		this.matricula = Utils.gerarUUID8();
 	}
-	public Funcionario(int matricula, String nome, String cargo, double salario) {
-		//this.matricula = matricula;
+	public Funcionario(String nome, String cargo, double salario) {
+		this.matricula = Utils.gerarUUID8();
 		this.nome = nome;
 		this.cargo = cargo;
 		this.salario = salario;
@@ -69,6 +69,8 @@ public class Funcionario {
 		String funcionario = matricula + "," + nome + "," + cargo + "," + salario + "\n";
 		return funcionario;
 	}
+
+	
 	
 
 }

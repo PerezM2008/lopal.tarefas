@@ -5,10 +5,14 @@ import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import br.dev.matheus.tarefas.dao.FuncionarioDAO;
 import br.dev.matheus.tarefas.model.Funcionario;
+import br.dev.matheus.tarefas.ui.FrameFuncionario;
+import br.dev.matheus.tarefas.ui.FrameFuncionarioList;
 import br.dev.matheus.tarefas.utils.Utils;
 
 public class Main {
@@ -16,6 +20,25 @@ public class Main {
 	private static String path = "c:\\Users\\25132972\\ProjetoTarefas\\tarefas.txt";
 
 	public static void main(String[] args) {
+		
+
+		
+		//new FrameFuncionario();
+		
+		new FrameFuncionarioList();
+		
+		FuncionarioDAO dao = new FuncionarioDAO();
+		dao.Listar(); 
+		
+		List<Funcionario> funcionarios = dao.Listar();
+		
+		for(Funcionario f : funcionarios) {
+			
+			System.out.println(f.getNome());
+			System.out.println(f.getCargo());
+			System.out.println("----------");
+		}
+		
 		
 //		Funcionario f = new Funcionario();
 //		f.setNome("Paulo");

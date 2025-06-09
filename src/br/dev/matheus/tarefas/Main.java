@@ -13,6 +13,7 @@ import br.dev.matheus.tarefas.dao.FuncionarioDAO;
 import br.dev.matheus.tarefas.model.Funcionario;
 import br.dev.matheus.tarefas.ui.FrameFuncionario;
 import br.dev.matheus.tarefas.ui.FrameFuncionarioList;
+import br.dev.matheus.tarefas.ui.FrameTarefas;
 import br.dev.matheus.tarefas.utils.Utils;
 
 public class Main {
@@ -25,7 +26,10 @@ public class Main {
 		
 		//new FrameFuncionario();
 		
+		
 		new FrameFuncionarioList();
+		new FrameTarefas();
+		
 		
 		FuncionarioDAO dao = new FuncionarioDAO();
 		dao.Listar(); 

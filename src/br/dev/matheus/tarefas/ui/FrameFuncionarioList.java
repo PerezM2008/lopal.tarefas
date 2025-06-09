@@ -28,7 +28,7 @@ public class FrameFuncionarioList {
 	private DefaultTableModel modelFuncionario;
 	private String[] colunas = { "CODIGO", "NOME", "CARGO" };
 
-	public FrameFuncionarioList() {
+	public FrameFuncionarioList() {	
 		criarTela();
 	}
 

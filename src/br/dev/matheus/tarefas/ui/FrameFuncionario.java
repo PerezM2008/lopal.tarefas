@@ -31,6 +31,8 @@ public class FrameFuncionario {
 		criarTela(frame);
 	}
 
+	
+
 	private void criarTela(JFrame frame) {
 		JDialog tela = new JDialog(frame, true);
 		tela.setTitle("Cadastro");

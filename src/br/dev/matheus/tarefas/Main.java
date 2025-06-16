@@ -27,7 +27,7 @@ public class Main {
 		//new FrameFuncionario();
 		
 		
-		new FrameFuncionarioList();
+		
 		new FrameTarefas();
 		
 		

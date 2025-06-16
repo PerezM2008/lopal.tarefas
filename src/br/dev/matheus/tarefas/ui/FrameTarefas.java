@@ -7,6 +7,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+import br.dev.matheus.tarefas.model.Funcionario;
+import br.dev.matheus.tarefas.model.ListaTarefas;
+
 public class FrameTarefas {
 	
 	private JButton btnFuncionarios;
@@ -19,41 +22,47 @@ public class FrameTarefas {
 	public void criarTela() {
 		
 		JFrame tela = new JFrame();
-		tela.setSize(600, 600);
+		tela.setSize(600, 400);
 		tela.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		tela.setLayout(null);
 		tela.setLocationRelativeTo(null);
 		tela.setTitle("Gerenciador de Tarefas");
 		tela.setResizable(false);
 		
-		//Container painel = tela.getContentPane();
+		Container painel = tela.getContentPane();
 		
 		
 		
 		btnFuncionarios = new JButton("Funcionarios");
-		btnFuncionarios.setBounds(50, 380, 200, 40);
+		btnFuncionarios.setBounds(50, 150, 200, 40);
 		btnFuncionarios.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				
+				new FrameFuncionarioList();
+				
+				
 				
 			}
 		});
 		
 		
 		btnTarefas = new JButton("Tarefas");
-		btnTarefas.setBounds(80, 50, 70, 150);
+		btnTarefas.setBounds(300, 150, 200, 40);
 		btnTarefas.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				
+				//new (tela);
+				//terminar configurações da tela ListarTarefas para que ele reconheça que ela existe
 				
 			}
 		});
 		
-		
+		painel.add(btnTarefas);
+		painel.add(btnFuncionarios);
 		
 		
 		tela.setVisible(true);

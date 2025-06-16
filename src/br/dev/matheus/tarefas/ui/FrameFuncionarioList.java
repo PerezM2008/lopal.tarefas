@@ -34,7 +34,7 @@ public class FrameFuncionarioList {
 
 	public void criarTela() {
 
-		JDialog tela = new JDialog();
+		JFrame tela = new JFrame();
 		tela.setSize(500, 500);
 		tela.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		tela.setLayout(null);
@@ -82,6 +82,7 @@ public class FrameFuncionarioList {
 
 		painel.add(labelTitulo);
 		painel.add(scrollFuncionarios);
+		painel.add(btnCadastro);
 
 		tela.setVisible(true);
 
